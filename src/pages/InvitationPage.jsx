@@ -3,6 +3,7 @@ import { useParams } from "react-router-dom";
 
 import LupitaEduardoTemplate from "../templates/LupitaEduardoTemplate";
 import NotFound from "./NotFound";
+import Cargando from "./Cargando";
 
 function InvitationPage() {
   const { slug } = useParams();
@@ -10,9 +11,10 @@ function InvitationPage() {
   const [invitation, setInvitation] = useState(null);
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState(false);
+  const API_URL = import.meta.env.VITE_API_URL;
 
   useEffect(() => {
-    fetch(`http://127.0.0.1:8000/api/invitations/${slug}`)
+    fetch(`${API_URL}/api/invitations/${slug}`)
       .then((response) => {
         if (!response.ok) {
           throw new Error();
@@ -32,7 +34,7 @@ function InvitationPage() {
   }, [slug]);
 
   if (loading) {
-    return <h1>Cargando...</h1>;
+    return <Cargando />;
   }
 
   if (error) {

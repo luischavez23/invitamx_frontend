@@ -11,7 +11,7 @@ function InvitationPage() {
   const [invitation, setInvitation] = useState(null);
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState(false);
-  const API_URL = import.meta.env.VITE_API_URL;
+  const VITE_API_URL = import.meta.env.VITE_API_URL;
 
   useEffect(() => {
     fetch(`${VITE_API_URL}/api/invitations/${slug}`)

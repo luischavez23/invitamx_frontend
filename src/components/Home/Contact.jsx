@@ -1,5 +1,3 @@
-import { motion } from "framer-motion";
-
 import { PartyPopper } from "lucide-react";
 
 import {
@@ -23,21 +21,11 @@ export default function Contact() {
       <div className="absolute -bottom-32 -right-16 w-[420px] h-[420px] rounded-full bg-[#FFB800]/20 blur-3xl pointer-events-none" />
 
       <div className="relative max-w-7xl mx-auto px-5 sm:px-8 py-24 sm:py-32 lg:py-40">
-        <motion.p
-          initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
-          transition={{ duration: 0.6 }}
-          className="text-xs sm:text-sm tracking-[0.2em] uppercase font-bold text-[#FFB800] mb-6"
-        >
+        <p className="text-xs sm:text-sm tracking-[0.2em] uppercase font-bold text-[#FFB800] mb-6">
           — Contacto
-        </motion.p>
+        </p>
 
-        <motion.h2
-          initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
-          transition={{ duration: 0.7, delay: 0.1 }}
+        <h2
           className="font-display text-5xl sm:text-7xl md:text-8xl lg:text-9xl tracking-tighter leading-[0.9] max-w-5xl"
         >
           Hagamos algo
@@ -45,31 +33,21 @@ export default function Contact() {
           <span className="font-serif-italic font-normal text-[#FF2A5F]">
             inolvidable.
           </span>
-        </motion.h2>
+        </h2>
 
-        <motion.p
-          initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
-          transition={{ duration: 0.7, delay: 0.2 }}
+        <p
           className="mt-8 sm:mt-10 text-base sm:text-lg text-white/70 max-w-2xl leading-relaxed"
         >
           Mándanos un WhatsApp con los detalles de tu evento y te enviamos una
           propuesta personalizada. Sin compromisos, solo magia.
-        </motion.p>
+        </p>
 
-        <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
-          transition={{ duration: 0.7, delay: 0.3 }}
-          className="mt-10 sm:mt-14"
-        >
+        <div className="mt-10 sm:mt-14">
           <WhatsAppButton
             testId="contact-whatsapp-btn"
             large
           />
-        </motion.div>
+        </div>
 
         <div className="mt-20 sm:mt-28 pt-10 border-t border-white/10 grid sm:grid-cols-2 lg:grid-cols-3 gap-8 sm:gap-10">
           <div>

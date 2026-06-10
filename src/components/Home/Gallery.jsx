@@ -1,5 +1,3 @@
-import { motion } from "framer-motion";
-
 import { ArrowUpRight } from "lucide-react";
 import { FaWhatsapp } from "react-icons/fa";
 
@@ -33,12 +31,8 @@ export default function Gallery(){
 
             <div className="columns-1 sm:columns-2 lg:columns-3 gap-4 sm:gap-5 [column-fill:_balance]">
                 {GALLERY.map((g, idx) => (
-                <motion.div
+                <div
                     key={idx}
-                    initial={{ opacity: 0, y: 30 }}
-                    whileInView={{ opacity: 1, y: 0 }}
-                    viewport={{ once: true, margin: "-50px" }}
-                    transition={{ duration: 0.6, delay: (idx % 3) * 0.08 }}
                     className="mb-4 sm:mb-5 break-inside-avoid"
                     data-testid={`gallery-item-${idx}`}
                 >
@@ -60,7 +54,7 @@ export default function Gallery(){
                         <div className="font-display text-xl">{g.label}</div>
                     </div>
                     </div>
-                </motion.div>
+                </div>
                 ))}
             </div>
 

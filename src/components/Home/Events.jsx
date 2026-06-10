@@ -1,6 +1,5 @@
-import { motion } from "framer-motion";
-
 import { EVENTS } from "../../constants/events";
+
 import { ArrowUpRight } from "lucide-react";
 import { WHATSAPP_LINK } from "../../constants/contact";
 
@@ -35,16 +34,12 @@ export default function Events(){
                 {EVENTS.map((event, idx) => {
                 const Icon = event.icon;
                 return (
-                    <motion.a
+                    <a
                     key={event.id}
                     href={WHATSAPP_LINK}
                     target="_blank"
                     rel="noopener noreferrer"
                     data-testid={`event-card-${event.id}`}
-                    initial={{ opacity: 0, y: 30 }}
-                    whileInView={{ opacity: 1, y: 0 }}
-                    viewport={{ once: true, margin: "-50px" }}
-                    transition={{ duration: 0.6, delay: idx * 0.08 }}
                     className={`group relative overflow-hidden rounded-3xl border border-black/5 ${event.span}`}
                     >
                     <img
@@ -73,7 +68,7 @@ export default function Events(){
                         </div>
                         </div>
                     </div>
-                    </motion.a>
+                    </a>
                 );
                 })}
             </div>

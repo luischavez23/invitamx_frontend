@@ -43,7 +43,7 @@ h1, h2, h3, .serif {
             rgba(0, 0, 0, 0.82),
             rgba(0, 0, 0, 0.45)
         ),
-        url(../src/assets/img/lupitaEduardo/lupita_y_eduardo_1.webp);
+        url('/images/lupita_y_eduardo_1.webp');
 
     background-size: cover;
     background-position: center;

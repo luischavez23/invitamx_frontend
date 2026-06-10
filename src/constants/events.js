@@ -7,7 +7,7 @@ export const EVENTS = [
             subtitle: "Para el sí, para siempre",
             icon: Heart,
             span: "md:col-span-2 md:row-span-2",
-            image: "/images/invitaMx/invitaMx-1.png",
+            image: "/images/invitaMx/invitaMx-1.webp",
             accent: "#FF2A5F",
         },
         {
@@ -16,7 +16,7 @@ export const EVENTS = [
             subtitle: "Una noche de princesa",
             icon: Crown,
             span: "md:col-span-2",
-            image: "/images/invitaMx/invitaMx-2.png",
+            image: "/images/invitaMx/invitaMx-2.webp",
             accent: "#FFB800",
         },
         {
@@ -25,7 +25,7 @@ export const EVENTS = [
             subtitle: "Un día especial",
             icon: Baby,
             span: "",
-            image: "/images/invitaMx/invitaMx-3.png",
+            image: "/images/invitaMx/invitaMx-3.webp",
             accent: "#1A1A1A",
         },
         {
@@ -34,7 +34,7 @@ export const EVENTS = [
             subtitle: "Bienvenido bebé",
             icon: Sparkles,
             span: "",
-            image: "/images/invitaMx/invitaMx-4.png",
+            image: "/images/invitaMx/invitaMx-4.webp",
             accent: "#FF2A5F",
         },
         {
@@ -43,7 +43,7 @@ export const EVENTS = [
             subtitle: "Otra vuelta al sol",
             icon: Cake,
             span: "md:col-span-2",
-            image: "/images/invitaMx/invitaMx-5.png",
+            image: "/images/invitaMx/invitaMx-5.webp",
             accent: "#FFB800",
         },
     ];

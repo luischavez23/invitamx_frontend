@@ -109,6 +109,7 @@ export default function Hero() {
             <img
               src="https://images.unsplash.com/photo-1629120881990-0c5b979884bc?crop=entropy&cs=srgb&fm=jpg&ixid=M3w4NjA1NzV8MHwxfHNlYXJjaHwzfHxkaWdpdGFsJTIwd2VkZGluZyUyMGludml0YXRpb24lMjBvbiUyMHNtYXJ0cGhvbmV8ZW58MHx8fHwxNzgwODU1MjgxfDA&ixlib=rb-4.1.0&q=85"
               alt="Invitación digital en celular"
+              fetchPriority="high"
               className="w-full h-full object-cover"
             />
           </div>

@@ -1,11 +1,11 @@
-import lupitaEduardo1 from "../../assets/img/lupitaEduardo/lupita_y_eduardo_5.png";
-import lupitaEduardo2 from "../../assets/img/lupitaEduardo/lupita_y_eduardo_6.png";
-import lupitaEduardo3 from "../../assets/img/lupitaEduardo/lupita_y_eduardo_7.png";
-import lupitaEduardo4 from "../../assets/img/lupitaEduardo/lupita_y_eduardo_8.png";
-import lupitaEduardo5 from "../../assets/img/lupitaEduardo/lupita_y_eduardo_9.png";
-import lupitaEduardo6 from "../../assets/img/lupitaEduardo/lupita_y_eduardo_10.png";
-import lupitaEduardo7 from "../../assets/img/lupitaEduardo/lupita_y_eduardo_11.png";
-import lupitaEduardo8 from "../../assets/img/lupitaEduardo/lupita_y_eduardo_4.png";
+import lupitaEduardo1 from "../../assets/img/lupitaEduardo/lupita_y_eduardo_5.webp";
+import lupitaEduardo2 from "../../assets/img/lupitaEduardo/lupita_y_eduardo_6.webp";
+import lupitaEduardo3 from "../../assets/img/lupitaEduardo/lupita_y_eduardo_7.webp";
+import lupitaEduardo4 from "../../assets/img/lupitaEduardo/lupita_y_eduardo_8.webp";
+import lupitaEduardo5 from "../../assets/img/lupitaEduardo/lupita_y_eduardo_9.webp";
+import lupitaEduardo6 from "../../assets/img/lupitaEduardo/lupita_y_eduardo_10.webp";
+import lupitaEduardo7 from "../../assets/img/lupitaEduardo/lupita_y_eduardo_11.webp";
+import lupitaEduardo8 from "../../assets/img/lupitaEduardo/lupita_y_eduardo_4.webp";
 
 
 const galleryImages = [
@@ -98,6 +98,7 @@ const Gallery = () => {
                 <img
                   src={image.src}
                   alt={image.alt}
+                  loading="lazy"
                   className="w-full h-[350px] object-cover"
                 />
               </div>

@@ -16,7 +16,7 @@ function Hero() {
   timeLeft.seconds === "00";
 
   return (
-    <header className="hero-bg h-screen flex flex-col items-center justify-center text-center px-4" data-aos="fade" data-aos-delay="300">
+    <header className="hero-bg h-screen flex flex-col items-center justify-center text-center px-4" fetchPriority="high" data-aos="fade" data-aos-delay="300">
 
       <h2 className="text-lg uppercase tracking-[0.5em] mb-6 text-gold">
         Unimos nuestras vidas

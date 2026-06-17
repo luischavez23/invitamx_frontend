@@ -11,36 +11,40 @@ function InvitationPage() {
   const [invitation, setInvitation] = useState(null);
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState(false);
+
   const API_URL = import.meta.env.VITE_API_URL;
 
   useEffect(() => {
-    fetch(`${API_URL}/api/invitations/${slug}`)
-      .then((response) => {
+    const fetchInvitation = async () => {
+      try {
+        const [response] = await Promise.all([
+          fetch(`${API_URL}/api/invitations/${slug}`),
+          new Promise((resolve) => setTimeout(resolve, 10000)), // 10 segundos
+        ]);
+
         if (!response.ok) {
-          throw new Error();
+          throw new Error("Invitación no encontrada");
         }
 
-        return response.json();
-      })
-      .then((data) => {
+        const data = await response.json();
         setInvitation(data);
-      })
-      .catch(() => {
+      } catch (error) {
+        console.error(error);
         setError(true);
-      })
-      .finally(() => {
+      } finally {
         setLoading(false);
-      });
-  }, [slug]);
+      }
+    };
+
+    fetchInvitation();
+  }, [slug, API_URL]);
 
   if (loading) {
     return <Cargando />;
   }
 
   if (error) {
-    return(
-        <NotFound />
-    );
+    return <NotFound />;
   }
 
   return (

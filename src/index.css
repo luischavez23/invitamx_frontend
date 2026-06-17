@@ -5,22 +5,14 @@
 html {
   scroll-behavior: smooth;
 }
+/* ========================= */
+/* Fade In */
+/* ========================= */
+
 @keyframes fadeIn {
   from {
     opacity: 0;
     transform: translateY(20px);
-  }
-
-  to {
-    opacity: 1;
-    transform: translateY(0);
-  }
-}
-
-@keyframes fadeInSlow {
-  from {
-    opacity: 0;
-    transform: translateY(40px);
   }
 
   to {
@@ -34,5 +26,91 @@ html {
 }
 
 .animate-fadeInSlow {
-  animation: fadeInSlow 2.5s ease forwards;
+  animation: fadeIn 2.5s ease forwards;
+}
+
+/* ========================= */
+/* Anillos */
+/* ========================= */
+
+@keyframes ringPulse {
+  0% {
+    transform: scale(1);
+    opacity: 0.6;
+  }
+
+  50% {
+    transform: scale(1.12);
+    opacity: 1;
+  }
+
+  100% {
+    transform: scale(1);
+    opacity: 0.6;
+  }
+}
+
+.animate-ring {
+  animation: ringPulse 3s ease-in-out infinite;
+}
+
+/* ========================= */
+/* Partículas */
+/* ========================= */
+
+@keyframes particleFloat {
+  0% {
+    transform: translateY(0px);
+    opacity: 0.2;
+  }
+
+  50% {
+    transform: translateY(-20px);
+    opacity: 1;
+  }
+
+  100% {
+    transform: translateY(0px);
+    opacity: 0.2;
+  }
+}
+
+.particle {
+  animation-name: particleFloat;
+  animation-iteration-count: infinite;
+  animation-timing-function: ease-in-out;
+}
+
+/* ========================= */
+/* Puntos cargando */
+/* ========================= */
+
+.loading-dots::after {
+  content: "";
+  display: inline-block;
+  width: 1.5em;
+  text-align: left;
+  animation: dots 1.5s infinite;
+}
+
+@keyframes dots {
+  0% {
+    content: "";
+  }
+
+  25% {
+    content: ".";
+  }
+
+  50% {
+    content: "..";
+  }
+
+  75% {
+    content: "...";
+  }
+
+  100% {
+    content: "";
+  }
 }

@@ -19,7 +19,6 @@ function InvitationPage() {
       try {
         const [response] = await Promise.all([
           fetch(`${API_URL}/api/invitations/${slug}`),
-          new Promise((resolve) => setTimeout(resolve, 5000)), 
         ]);
 
         if (!response.ok) {
